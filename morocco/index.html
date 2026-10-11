@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Morocco — The Kingdom of Light &amp; Wonder</title>
-  <meta name="description" content="An immersive journey through the twelve regions of Morocco — heritage, music, cuisine and craft. المملكة المغربية" />
+  <title>Morocco | The Kingdom of Light &amp; Wonder</title>
+  <meta name="description" content="An immersive journey through the twelve regions of Morocco: heritage, music, cuisine and craft. المملكة المغربية" />
   <meta name="theme-color" content="#06161D" />
+  <meta property="og:title" content="Morocco | The Kingdom of Light &amp; Wonder" />
+  <meta property="og:description" content="Twelve regions of Morocco: heritage, music, cuisine and craft." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2306161d'/%3E%3Cpolygon points='20,5 24.2,15.8 35,20 24.2,24.2 20,35 15.8,24.2 5,20 15.8,15.8' fill='none' stroke='%237de2d1' stroke-width='2'/%3E%3Cpolygon points='9.4,9.4 20,12.6 30.6,9.4 27.4,20 30.6,30.6 20,27.4 9.4,30.6 12.6,20' fill='none' stroke='%237de2d1' stroke-width='2'/%3E%3C/svg%3E" />
   <script>document.documentElement.classList.add('js');</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,8 +94,6 @@
     @keyframes letterIn { to { opacity: 1; transform: none; filter: drop-shadow(0 0 28px rgb(var(--accent) / .35)); } }
     @keyframes shimmer { from { background-position: 0% 0; } to { background-position: 320% 0; } }
     @keyframes draw { to { stroke-dashoffset: 0; } }
-    .scroll-cue span { display: block; width: 1px; height: 46px; background: linear-gradient(to bottom, transparent, rgb(var(--accent-soft))); animation: cue 2.4s var(--ease) infinite; transform-origin: top; }
-    @keyframes cue { 0% { transform: scaleY(0); opacity: 1; } 60% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
 
     /* ---------- Section headings ---------- */
     .eyebrow { font-size: .72rem; letter-spacing: .38em; text-transform: uppercase; color: rgb(var(--accent-soft)); }
@@ -239,7 +241,7 @@
     .no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { scrollbar-width: none; }
 
     /* =========================================================
-       PREMIUM EDITORIAL LAYER — photographic, quiet, smooth
+       PREMIUM EDITORIAL LAYER - photographic, quiet, smooth
     ========================================================= */
     html, body { background: rgb(var(--bg)); }
     body { color: rgb(var(--ink)); font-size: 16px; line-height: 1.6; }
@@ -320,7 +322,7 @@
 
 
     /* =========================================================
-       MOTION — tuned with the web-animation-design guidelines
+       MOTION - tuned with the web-animation-design guidelines
        ease-out for enter/exit, ease-in-out for on-screen movement,
        ease for hover colour; UI interactions under 300ms.
     ========================================================= */
@@ -420,6 +422,21 @@
     .map-coast { stroke-dasharray: 1; stroke-dashoffset: 1; }
     @keyframes fadeOnly { from { opacity: 0; } }
 
+    /* =========================================================
+       taste-skill pass: one radius scale (pill for controls, 24px containers,
+       16px inner blocks), tinted shadows, grain, balanced headings
+    ========================================================= */
+    :root { --shadow: 0 30px 80px -40px rgb(1 14 20 / .85); }
+    .region-card, .car-card, .craft-stage { border-radius: 24px; }
+    .info-card, .quiz-opt, .craft-tab, .sel-btn, .tadelakt { border-radius: 16px; }
+    .btn-gold { box-shadow: 0 12px 28px -16px rgb(3 36 44 / .7), inset 0 1px 0 rgb(255 255 255 / .25); }
+    .theme-light .btn-gold { box-shadow: 0 12px 28px -16px rgb(13 90 100 / .45), inset 0 1px 0 rgb(255 255 255 / .25); }
+    h1, h2, h3, h4, .section-title { text-wrap: balance; }
+    p, li, blockquote { text-wrap: pretty; }
+    body::after { content: ""; position: fixed; inset: 0; z-index: 45; pointer-events: none; opacity: .045; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+    @media (prefers-reduced-transparency: reduce) { body::after { display: none; } }
+
     /* Reduced motion, tiered (accessible-animation): remove vestibular movement,
        keep short fades so nothing teleports, keep colour / focus feedback. */
     @media (prefers-reduced-motion: reduce) {
@@ -446,7 +463,7 @@
   </style>
   <!-- TAILWIND:START -->
   <!-- Tailwind CSS v3.4.16 (MIT), compiled for the classes used on this page. -->
-  <style id="tailwind">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Plus Jakarta Sans,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.\!bottom-auto{bottom:auto!important}.\!right-5{right:1.25rem!important}.\!top-\[4\.6rem\]{top:4.6rem!important}.bottom-3{bottom:.75rem}.bottom-6{bottom:1.5rem}.left-1\/2{left:50%}.left-3{left:.75rem}.left-4{left:1rem}.left-5{left:1.25rem}.right-4{right:1rem}.top-4{top:1rem}.top-5{top:1.25rem}.isolate{isolation:isolate}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.-ml-1{margin-left:-.25rem}.-mt-16{margin-top:-4rem}.mb-10{margin-bottom:2.5rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.aspect-\[16\/10\]{aspect-ratio:16/10}.aspect-\[16\/8\]{aspect-ratio:16/8}.\!h-8{height:2rem!important}.h-16{height:4rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-\[260px\]{height:260px}.h-\[340px\]{height:340px}.h-full{height:100%}.min-h-\[1\.25rem\]{min-height:1.25rem}.min-h-\[100svh\]{min-height:100svh}.min-h-\[150px\]{min-height:150px}.min-h-\[520px\]{min-height:520px}.\!w-8{width:2rem!important}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.w-max{width:-moz-max-content;width:max-content}.w-px{width:1px}.min-w-0{min-width:0}.min-w-\[230px\]{min-width:230px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-\[360px\]{max-width:360px}.max-w-\[380px\]{max-width:380px}.max-w-\[420px\]{max-width:420px}.max-w-full{max-width:100%}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.flex-none{flex:none}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize{resize:both}.scroll-mt-16{scroll-margin-top:4rem}.scroll-mt-24{scroll-margin-top:6rem}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.content-center{align-content:center}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-7>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.75rem*var(--tw-space-y-reverse))}.self-stretch{align-self:stretch}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-\[24px\]{border-radius:24px}.rounded-\[28px\]{border-radius:28px}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.\!border-gold\/25{border-color:rgb(var(--accent)/.25)!important}.\!border-gold\/30{border-color:rgb(var(--accent)/.3)!important}.border-black\/40{border-color:rgba(0,0,0,.4)}.border-gold\/10{border-color:rgb(var(--accent)/.1)}.border-gold\/20{border-color:rgb(var(--accent)/.2)}.border-gold\/25{border-color:rgb(var(--accent)/.25)}.border-gold\/35{border-color:rgb(var(--accent)/.35)}.border-gold\/50{border-color:rgb(var(--accent)/.5)}.\!bg-gold\/5{background-color:rgb(var(--accent)/.05)!important}.bg-\[\#0b2a33\]{--tw-bg-opacity:1;background-color:rgb(11 42 51/var(--tw-bg-opacity,1))}.bg-black\/20{background-color:rgba(0,0,0,.2)}.bg-black\/35{background-color:rgba(0,0,0,.35)}.bg-black\/40{background-color:rgba(0,0,0,.4)}.bg-gold\/20{background-color:rgb(var(--accent)/.2)}.bg-transparent{background-color:transparent}.bg-white\/\[\.02\]{background-color:hsla(0,0%,100%,.02)}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-\[\#091f28\]{--tw-gradient-from:#091f28 var(--tw-gradient-from-position);--tw-gradient-to:rgba(9,31,40,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),transparent var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-black\/30{--tw-gradient-to:rgba(0,0,0,.3) var(--tw-gradient-to-position)}.p-1\.5{padding:.375rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.pb-1{padding-bottom:.25rem}.pb-10{padding-bottom:2.5rem}.pb-14{padding-bottom:3.5rem}.pl-4{padding-left:1rem}.pt-20{padding-top:5rem}.pt-28{padding-top:7rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-arabic{font-family:Amiri,serif}.font-cinzel{font-family:Cinzel,serif}.font-sans{font-family:Plus Jakarta Sans,system-ui,sans-serif}.font-serif{font-family:Playfair Display,Georgia,serif}.\!text-\[10px\]{font-size:10px!important}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-\[1\.9rem\]{font-size:1.9rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-\[15px\]{font-size:15px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.18em\]{letter-spacing:.18em}.tracking-\[0\.25em\]{letter-spacing:.25em}.tracking-\[0\.2em\]{letter-spacing:.2em}.tracking-\[0\.32em\]{letter-spacing:.32em}.tracking-\[0\.3em\]{letter-spacing:.3em}.tracking-widest{letter-spacing:.1em}.text-gold{--tw-text-opacity:1;color:rgb(var(--accent)/var(--tw-text-opacity,1))}.text-gold-soft{--tw-text-opacity:1;color:rgb(var(--accent-soft)/var(--tw-text-opacity,1))}.text-gold-soft\/60{color:rgb(var(--accent-soft)/.6)}.text-gold-soft\/80{color:rgb(var(--accent-soft)/.8)}.text-gold-soft\/90{color:rgb(var(--accent-soft)/.9)}.text-sand{--tw-text-opacity:1;color:rgb(var(--ink)/var(--tw-text-opacity,1))}.text-sand\/40{color:rgb(var(--ink)/.4)}.text-sand\/45{color:rgb(var(--ink)/.45)}.text-sand\/50{color:rgb(var(--ink)/.5)}.text-sand\/55{color:rgb(var(--ink)/.55)}.text-sand\/60{color:rgb(var(--ink)/.6)}.text-sand\/65{color:rgb(var(--ink)/.65)}.text-sand\/70{color:rgb(var(--ink)/.7)}.text-sand\/75{color:rgb(var(--ink)/.75)}.text-sand\/80{color:rgb(var(--ink)/.8)}.text-sand\/85{color:rgb(var(--ink)/.85)}.text-sand\/90{color:rgb(var(--ink)/.9)}.text-terracotta{--tw-text-opacity:1;color:rgb(194 89 63/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/60{color:hsla(0,0%,100%,.6)}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.accent-\[\#2dc4b2\]{accent-color:#2dc4b2}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-black\/50{--tw-shadow-color:rgba(0,0,0,.5);--tw-shadow:var(--tw-shadow-colored)}.outline{outline-style:solid}.ring{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.blur{--tw-blur:blur(8px)}.blur,.drop-shadow{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-700{transition-duration:.7s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.placeholder\:text-sand\/35::-moz-placeholder{color:rgb(var(--ink)/.35)}.placeholder\:text-sand\/35::placeholder{color:rgb(var(--ink)/.35)}.first\:ml-0:first-child{margin-left:0}.focus-within\:border-gold-soft:focus-within{--tw-border-opacity:1;border-color:rgb(var(--accent-soft)/var(--tw-border-opacity,1))}.hover\:bg-white\/5:hover{background-color:hsla(0,0%,100%,.05)}.hover\:text-gold-soft:hover{--tw-text-opacity:1;color:rgb(var(--accent-soft)/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:rotate-45{--tw-rotate:45deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width:640px){.sm\:inline{display:inline}.sm\:flex{display:flex}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-7{padding:1.75rem}.sm\:p-8{padding:2rem}.sm\:p-9{padding:2.25rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:py-32{padding-top:8rem;padding-bottom:8rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:tracking-\[0\.28em\]{letter-spacing:.28em}}@media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-\[1fr_1fr\]{grid-template-columns:1fr 1fr}}@media (min-width:1024px){.lg\:min-w-0{min-width:0}.lg\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-\[1\.15fr_1fr\]{grid-template-columns:1.15fr 1fr}.lg\:grid-cols-\[1\.3fr_1fr_1fr\]{grid-template-columns:1.3fr 1fr 1fr}.lg\:grid-cols-\[1\.45fr_1fr\]{grid-template-columns:1.45fr 1fr}.lg\:grid-cols-\[320px_1fr\]{grid-template-columns:320px 1fr}.lg\:flex-row{flex-direction:row}.lg\:flex-col{flex-direction:column}.lg\:overflow-visible{overflow:visible}}@media (min-width:1280px){.xl\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}.\[\&\>svg\]\:h-8>svg{height:2rem}.\[\&\>svg\]\:w-8>svg{width:2rem}</style>
+  <style id="tailwind">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Plus Jakarta Sans,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.\!bottom-auto{bottom:auto!important}.\!right-\[4\.5rem\]{right:4.5rem!important}.\!top-6{top:1.5rem!important}.bottom-3{bottom:.75rem}.left-3{left:.75rem}.right-4{right:1rem}.top-4{top:1rem}.isolate{isolation:isolate}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.-ml-1{margin-left:-.25rem}.-mt-16{margin-top:-4rem}.mb-10{margin-bottom:2.5rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.aspect-\[16\/10\]{aspect-ratio:16/10}.aspect-\[16\/8\]{aspect-ratio:16/8}.\!h-8{height:2rem!important}.h-16{height:4rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-\[260px\]{height:260px}.h-\[340px\]{height:340px}.h-full{height:100%}.min-h-\[1\.25rem\]{min-height:1.25rem}.min-h-\[100svh\]{min-height:100svh}.min-h-\[150px\]{min-height:150px}.min-h-\[520px\]{min-height:520px}.\!w-8{width:2rem!important}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.w-max{width:-moz-max-content;width:max-content}.w-px{width:1px}.min-w-0{min-width:0}.min-w-\[230px\]{min-width:230px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-\[360px\]{max-width:360px}.max-w-\[380px\]{max-width:380px}.max-w-\[420px\]{max-width:420px}.max-w-full{max-width:100%}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.flex-none{flex:none}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize{resize:both}.scroll-mt-16{scroll-margin-top:4rem}.scroll-mt-24{scroll-margin-top:6rem}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.content-center{align-content:center}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-7>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.75rem*var(--tw-space-y-reverse))}.self-stretch{align-self:stretch}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.text-wrap{text-wrap:wrap}.rounded-2xl{border-radius:1rem}.rounded-\[24px\]{border-radius:24px}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.\!border-gold\/25{border-color:rgb(var(--accent)/.25)!important}.\!border-gold\/30{border-color:rgb(var(--accent)/.3)!important}.border-black\/40{border-color:rgba(0,0,0,.4)}.border-gold\/10{border-color:rgb(var(--accent)/.1)}.border-gold\/20{border-color:rgb(var(--accent)/.2)}.border-gold\/25{border-color:rgb(var(--accent)/.25)}.border-gold\/35{border-color:rgb(var(--accent)/.35)}.border-gold\/50{border-color:rgb(var(--accent)/.5)}.\!bg-gold\/5{background-color:rgb(var(--accent)/.05)!important}.bg-\[\#0b2a33\]{--tw-bg-opacity:1;background-color:rgb(11 42 51/var(--tw-bg-opacity,1))}.bg-black\/20{background-color:rgba(0,0,0,.2)}.bg-black\/35{background-color:rgba(0,0,0,.35)}.bg-black\/40{background-color:rgba(0,0,0,.4)}.bg-gold\/20{background-color:rgb(var(--accent)/.2)}.bg-transparent{background-color:transparent}.bg-white\/\[\.02\]{background-color:hsla(0,0%,100%,.02)}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-\[\#091f28\]{--tw-gradient-from:#091f28 var(--tw-gradient-from-position);--tw-gradient-to:rgba(9,31,40,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),transparent var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-black\/30{--tw-gradient-to:rgba(0,0,0,.3) var(--tw-gradient-to-position)}.p-1\.5{padding:.375rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.pb-1{padding-bottom:.25rem}.pb-10{padding-bottom:2.5rem}.pb-14{padding-bottom:3.5rem}.pl-4{padding-left:1rem}.pt-20{padding-top:5rem}.pt-28{padding-top:7rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-arabic{font-family:Amiri,serif}.font-cinzel{font-family:Cinzel,serif}.font-sans{font-family:Plus Jakarta Sans,system-ui,sans-serif}.font-serif{font-family:Playfair Display,Georgia,serif}.\!text-\[10px\]{font-size:10px!important}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-\[1\.9rem\]{font-size:1.9rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-\[15px\]{font-size:15px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.18em\]{letter-spacing:.18em}.tracking-\[0\.25em\]{letter-spacing:.25em}.tracking-\[0\.2em\]{letter-spacing:.2em}.tracking-\[0\.32em\]{letter-spacing:.32em}.tracking-widest{letter-spacing:.1em}.text-gold{--tw-text-opacity:1;color:rgb(var(--accent)/var(--tw-text-opacity,1))}.text-gold-soft{--tw-text-opacity:1;color:rgb(var(--accent-soft)/var(--tw-text-opacity,1))}.text-gold-soft\/60{color:rgb(var(--accent-soft)/.6)}.text-gold-soft\/80{color:rgb(var(--accent-soft)/.8)}.text-gold-soft\/90{color:rgb(var(--accent-soft)/.9)}.text-sand{--tw-text-opacity:1;color:rgb(var(--ink)/var(--tw-text-opacity,1))}.text-sand\/40{color:rgb(var(--ink)/.4)}.text-sand\/45{color:rgb(var(--ink)/.45)}.text-sand\/50{color:rgb(var(--ink)/.5)}.text-sand\/55{color:rgb(var(--ink)/.55)}.text-sand\/60{color:rgb(var(--ink)/.6)}.text-sand\/65{color:rgb(var(--ink)/.65)}.text-sand\/70{color:rgb(var(--ink)/.7)}.text-sand\/75{color:rgb(var(--ink)/.75)}.text-sand\/80{color:rgb(var(--ink)/.8)}.text-sand\/85{color:rgb(var(--ink)/.85)}.text-sand\/90{color:rgb(var(--ink)/.9)}.text-terracotta{--tw-text-opacity:1;color:rgb(194 89 63/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/60{color:hsla(0,0%,100%,.6)}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.accent-\[\#2dc4b2\]{accent-color:#2dc4b2}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-black\/50{--tw-shadow-color:rgba(0,0,0,.5);--tw-shadow:var(--tw-shadow-colored)}.outline{outline-style:solid}.ring{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.blur{--tw-blur:blur(8px)}.blur,.drop-shadow{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-700{transition-duration:.7s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.placeholder\:text-sand\/35::-moz-placeholder{color:rgb(var(--ink)/.35)}.placeholder\:text-sand\/35::placeholder{color:rgb(var(--ink)/.35)}.first\:ml-0:first-child{margin-left:0}.focus-within\:border-gold-soft:focus-within{--tw-border-opacity:1;border-color:rgb(var(--accent-soft)/var(--tw-border-opacity,1))}.hover\:bg-white\/5:hover{background-color:hsla(0,0%,100%,.05)}.hover\:text-gold-soft:hover{--tw-text-opacity:1;color:rgb(var(--accent-soft)/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:rotate-45{--tw-rotate:45deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width:640px){.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-7{padding:1.75rem}.sm\:p-8{padding:2rem}.sm\:p-9{padding:2.25rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:py-32{padding-top:8rem;padding-bottom:8rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:tracking-\[0\.28em\]{letter-spacing:.28em}}@media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-\[1fr_1fr\]{grid-template-columns:1fr 1fr}}@media (min-width:1024px){.lg\:min-w-0{min-width:0}.lg\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-\[1\.15fr_1fr\]{grid-template-columns:1.15fr 1fr}.lg\:grid-cols-\[1\.3fr_1fr_1fr\]{grid-template-columns:1.3fr 1fr 1fr}.lg\:grid-cols-\[1\.45fr_1fr\]{grid-template-columns:1.45fr 1fr}.lg\:grid-cols-\[320px_1fr\]{grid-template-columns:320px 1fr}.lg\:flex-row{flex-direction:row}.lg\:flex-col{flex-direction:column}.lg\:overflow-visible{overflow:visible}}@media (min-width:1280px){.xl\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}.\[\&\>svg\]\:h-3\.5>svg{height:.875rem}.\[\&\>svg\]\:h-8>svg{height:2rem}.\[\&\>svg\]\:w-3\.5>svg{width:.875rem}.\[\&\>svg\]\:w-8>svg{width:2rem}</style>
   <!-- TAILWIND:END -->
 </head>
 
@@ -456,7 +473,7 @@
   <!-- ================= NAV ================= -->
   <header id="nav">
     <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-      <a href="#hero" class="group flex items-center gap-3" aria-label="Morocco — back to top">
+      <a href="#hero" class="group flex items-center gap-3" aria-label="Morocco: back to top">
         <span id="logo-star" class="block h-8 w-8 text-gold transition-transform duration-700 group-hover:rotate-45"></span>
         <span class="font-cinzel text-sm tracking-[0.32em] text-gold-soft">MAROC</span>
         <span class="hidden font-arabic text-lg text-sand/60 sm:inline" lang="ar">المغرب</span>
@@ -521,20 +538,16 @@
         </dl>
       </div>
 
-      <a href="#regions" class="scroll-cue absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-sand/40 sm:flex" aria-label="Scroll to regions">
-        Scroll <span></span>
-      </a>
     </section>
 
     <!-- ================= REGIONS ================= -->
     <section id="regions" class="theme-dark relative scroll-mt-16 py-24 sm:py-32" aria-labelledby="regions-title">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="mx-auto mb-14 max-w-3xl text-center">
-          <p class="eyebrow reveal">I · The Odyssey</p>
-          <h2 id="regions-title" class="section-title reveal mt-4" style="--d:100ms">The <span class="gold-text">Twelve Regions</span></h2>
+          <h2 id="regions-title" class="section-title reveal" style="--d:100ms">The <span class="gold-text">Twelve Regions</span></h2>
           <p class="reveal mt-2 font-arabic text-2xl text-sand/60" style="--d:200ms" lang="ar" dir="rtl">جهات المملكة الاثنتا عشرة</p>
           <div class="divider-star reveal mx-auto mt-6 w-max" style="--d:250ms" aria-hidden="true">✦</div>
-          <p class="reveal mt-6 text-base leading-relaxed text-sand/65 sm:text-lg" style="--d:300ms">From the Strait of Gibraltar to the turquoise lagoon of Dakhla — twelve kingdoms of light, each with its own music, table and craft. Open any region to step inside.</p>
+          <p class="reveal mt-6 text-base leading-relaxed text-sand/65 sm:text-lg" style="--d:300ms">From the Strait of Gibraltar to the turquoise lagoon of Dakhla: twelve kingdoms of light, each with its own music, table and craft. Open any region to step inside.</p>
         </div>
 
         <div class="reveal mb-10 flex flex-col items-center justify-between gap-5 lg:flex-row" style="--d:100ms">
@@ -575,7 +588,7 @@
         <!-- Map -->
         <div id="view-map" role="tabpanel" aria-labelledby="tab-map" hidden>
           <div class="grid items-start gap-8 lg:grid-cols-[1.15fr_1fr]">
-            <div class="glass iri relative rounded-[28px] p-4 sm:p-6">
+            <div class="glass iri relative rounded-[24px] p-4 sm:p-6">
               <div class="map-wrap relative" id="map-wrap"></div>
               <div id="map-tip" class="map-tip glass rounded-xl px-3 py-2 text-xs"></div>
             </div>
@@ -594,10 +607,9 @@
     <section id="crafts" class="theme-light relative scroll-mt-16 py-24 sm:py-32" aria-labelledby="crafts-title">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="mx-auto mb-14 max-w-3xl text-center">
-          <p class="eyebrow reveal">II · The Cultural Tapestry</p>
-          <h2 id="crafts-title" class="section-title reveal mt-4" style="--d:100ms">Hands of the <span class="gold-text">Maâlem</span></h2>
+          <h2 id="crafts-title" class="section-title reveal" style="--d:100ms">Hands of the <span class="gold-text">Maâlem</span></h2>
           <p class="reveal mt-2 font-arabic text-2xl text-sand/60" style="--d:200ms" lang="ar" dir="rtl">أنامل المعلّم</p>
-          <p class="reveal mt-6 text-base leading-relaxed text-sand/65 sm:text-lg" style="--d:300ms">A maâlem is a master artisan. Their knowledge passes from hand to hand, never from a book. Touch, light, weave and pour — four crafts, four ways to feel Morocco.</p>
+          <p class="reveal mt-6 text-base leading-relaxed text-sand/65 sm:text-lg" style="--d:300ms">A maâlem is a master artisan. Their knowledge passes from hand to hand, never from a book. Touch, light, weave and pour: four crafts, four ways to feel Morocco.</p>
         </div>
         <div class="grid gap-6 lg:grid-cols-[320px_1fr]">
           <div class="reveal flex flex-row gap-3 overflow-x-auto pb-1 no-scrollbar lg:flex-col lg:overflow-visible" role="tablist" aria-label="Crafts" id="craft-tabs"></div>
@@ -620,14 +632,13 @@
     <section id="quiz" class="theme-light tint-blue relative scroll-mt-16 py-24 sm:py-32" aria-labelledby="quiz-title">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="mx-auto mb-14 max-w-3xl text-center">
-          <p class="eyebrow reveal">III · The Oracle of the Souk</p>
-          <h2 id="quiz-title" class="section-title reveal mt-4" style="--d:100ms">Find Your <span class="gold-text">Moroccan Soul</span></h2>
+          <h2 id="quiz-title" class="section-title reveal" style="--d:100ms">Find Your <span class="gold-text">Moroccan Soul</span></h2>
           <p class="reveal mt-2 font-arabic text-2xl text-sand/60" style="--d:200ms" lang="ar" dir="rtl">اكتشف روحك المغربية</p>
           <p class="reveal mt-6 text-base leading-relaxed text-sand/65 sm:text-lg" style="--d:300ms">Three questions. One region that already knows your name. Then gather your chosen regions into a route.</p>
         </div>
         <div class="grid items-start gap-6 lg:grid-cols-[1.45fr_1fr]">
-          <div id="quiz-card" class="glass iri reveal min-h-[520px] rounded-[28px] p-6 sm:p-9"></div>
-          <aside id="journey" class="glass iri reveal scroll-mt-24 rounded-[28px] p-6 sm:p-7" style="--d:150ms" aria-labelledby="journey-title">
+          <div id="quiz-card" class="glass iri reveal min-h-[520px] rounded-[24px] p-6 sm:p-9"></div>
+          <aside id="journey" class="glass iri reveal scroll-mt-24 rounded-[24px] p-6 sm:p-7" style="--d:150ms" aria-labelledby="journey-title">
             <div class="flex items-center justify-between gap-3">
               <div>
                 <p class="eyebrow !text-[10px]">Travel Planner</p>
@@ -704,19 +715,19 @@
     'use strict';
 
     /* =========================================================
-       DATA — THE 12 REGIONS
+       DATA - THE 12 REGIONS
     ========================================================= */
     const REGIONS = [
       {
         id: 'tanger', name: 'Tanger-Tétouan-Al Hoceïma', ar: 'طنجة تطوان الحسيمة', epithet: 'The Gateway of Two Seas',
         capital: 'Tangier', tags: ['coast', 'mountain'], climate: 'Mediterranean Breeze', climateIcon: 'wind',
-        season: 'Apr – Jun · Sep – Oct', days: 3, lon: -5.8, lat: 35.77,
+        season: 'Apr-Jun · Sep-Oct', days: 3, lon: -5.8, lat: 35.77,
         lede: 'Where the Atlantic meets the Mediterranean, and Africa gazes at Europe across fourteen kilometres of shimmering strait.',
         highlights: ["Tangier's Grand Socco & Kasbah", 'Chefchaouen, the Blue Pearl of the Rif', 'Hercules Caves at Cap Spartel', 'Rif Mountains & Talassemtane National Park', "Al Hoceïma's Mediterranean coves"],
         mood: 'Mediterranean breeze, whitewashed alleys, blue lime wash.',
-        unesco: true, heritage: ['Medina of Tétouan (formerly Titawin) — inscribed 1997'],
+        unesco: true, heritage: ['Medina of Tétouan (formerly Titawin) (inscribed 1997)'],
         music: { name: 'Andalusian Āla & Jebli Taqtoqa', desc: 'Refined nūba suites carried from Al-Andalus, and the lively hill songs of the Jbala people.' },
-        cuisine: ['Bissara — velvety fava bean soup', 'Chefchaouen goat cheese', 'Fish tagine with chermoula', 'Tétouani almond pastries'],
+        cuisine: ['Bissara: velvety fava bean soup', 'Chefchaouen goat cheese', 'Fish tagine with chermoula', 'Tétouani almond pastries'],
         crafts: ['Hand-loomed Chefchaouen wool blankets', 'Tétouan silk embroidery & zellij', 'Jebli straw hats with wool pompoms'],
         fact: "On clear days you can see Spain's coast from Tangier's Café Hafa, a cliffside terrace beloved by writers since 1921.",
         sky: ['#0a1838', '#2756c9', '#a9cdf5'], atmo: ['#1034A6', '#2b6fd6', '#7fb3e6'],
@@ -724,13 +735,13 @@
       {
         id: 'oriental', name: "L'Oriental", ar: 'جهة الشرق', epithet: 'The Sunrise Frontier',
         capital: 'Oujda', tags: ['coast', 'desert', 'mountain'], climate: 'Semi-Arid Sunlight', climateIcon: 'sunrise',
-        season: 'Mar – May · Oct', days: 3, lon: -1.91, lat: 34.68,
+        season: 'Mar-May · Oct', days: 3, lon: -1.91, lat: 34.68,
         lede: "Morocco's eastern dawn: Mediterranean sand at Saïdia, mineral canyons, and palm oases murmuring with Andalusian melody.",
         highlights: ["Oujda's medina & Bab Sidi Abdelouahab", 'Berkane, the capital of clementines', "Saïdia's golden Mediterranean beach", "Figuig's oasis of seven ksour", 'Zegzel Gorges & the Beni Snassen mountains'],
         mood: 'Desert borders, Andalusian rhythms, mineral canyons.',
-        unesco: false, heritage: ['The ancient ksour & palm groves of Figuig', 'Moulouya River estuary — protected Ramsar wetland'],
+        unesco: false, heritage: ['The ancient ksour & palm groves of Figuig', 'Moulouya River estuary, a protected Ramsar wetland'],
         music: { name: 'Reggada & Gharnati', desc: 'Shoulder-shaking Reggada dances of the Beni Snassen, and the Gharnati style of Granada preserved in Oujda.' },
-        cuisine: ["Karan — Oujda's chickpea flan", 'Berkane clementines', 'Slow-roasted lamb méchoui', 'Couscous with buttermilk (seksu belben)'],
+        cuisine: ["Karan: Oujda's chickpea flan", 'Berkane clementines', 'Slow-roasted lamb méchoui', 'Couscous with buttermilk (seksu belben)'],
         crafts: ['Palm-frond basketry of Figuig', 'Gold-embroidered Oujdi caftans', 'Hand-woven wool burnous'],
         fact: 'Oujda hosts an international Raï festival: the genre crossed the border from Oran and took root here.',
         sky: ['#2a1020', '#a8483a', '#f4ac5e'], atmo: ['#8a3b2e', '#d97a3c', '#E5C158'],
@@ -738,13 +749,13 @@
       {
         id: 'fes', name: 'Fès-Meknès', ar: 'فاس مكناس', epithet: 'The Imperial Cradle of Wisdom',
         capital: 'Fès', tags: ['imperial', 'mountain'], climate: 'Continental Highland', climateIcon: 'thermometer-sun',
-        season: 'Mar – May · Sep – Nov', days: 4, lon: -5.0, lat: 34.03,
+        season: 'Mar-May · Sep-Nov', days: 4, lon: -5.0, lat: 34.03,
         lede: 'A labyrinth of some nine thousand alleys where scholars, tanners and zellij masters have kept time with the call to prayer for twelve centuries.',
         highlights: ['Al-Qarawiyyin, founded in 859 by Fatima al-Fihri', "Chouara Tannery's pigment vats", 'Bab Mansour, the great gate of Meknes', 'Roman mosaics of Volubilis', "Ifrane's cedar forests, the 'Little Switzerland'"],
         mood: 'Ancient parchment, zellij artisans, royal gates.',
-        unesco: true, heritage: ['Medina of Fez — inscribed 1981', 'Historic City of Meknes — inscribed 1996', 'Archaeological Site of Volubilis — inscribed 1997'],
+        unesco: true, heritage: ['Medina of Fez (inscribed 1981)', 'Historic City of Meknes (inscribed 1996)', 'Archaeological Site of Volubilis (inscribed 1997)'],
         music: { name: 'Malhun & Andalusian Nūba', desc: "Sung poetry born in the artisans' guilds, and the city's celebrated Festival of World Sacred Music." },
-        cuisine: ['Pastilla fassia — pigeon & almond pie', 'Harira, the soup that breaks the fast', 'Kaab el ghazal — gazelle horns', 'Mrouzia with raisins & honey'],
+        cuisine: ['Pastilla fassia: pigeon & almond pie', 'Harira, the soup that breaks the fast', 'Kaab el ghazal: gazelle horns', 'Mrouzia with raisins & honey'],
         crafts: ['Zellij mosaic, chiselled by hand', 'Vegetable-tanned leather', "Cobalt 'Fez blue' pottery"],
         fact: 'Al-Qarawiyyin is recognized by Guinness World Records as the oldest existing, continually operating educational institution in the world.',
         sky: ['#120f22', '#4f2c58', '#da8f4c'], atmo: ['#5b2a6e', '#1E5638', '#D4AF37'],
@@ -752,13 +763,13 @@
       {
         id: 'rabat', name: 'Rabat-Salé-Kénitra', ar: 'الرباط سلا القنيطرة', epithet: 'The Capital of Light & Royal Heritage',
         capital: 'Rabat', tags: ['imperial', 'coast'], climate: 'Mild Atlantic', climateIcon: 'sun',
-        season: 'All year · best Apr – Oct', days: 2, lon: -6.84, lat: 34.02,
+        season: 'All year · best Apr-Oct', days: 2, lon: -6.84, lat: 34.02,
         lede: "A garden capital on the Bouregreg, where Almohad stone, Andalusian gardens and Zaha Hadid's sculptural theatre share the same Atlantic light.",
         highlights: ['Hassan Tower & the Mausoleum of Mohammed V', 'Kasbah des Oudayas & its Andalusian Gardens', 'The Bouregreg river & the medina of Salé', 'The Grand Theatre of Rabat', 'Chellah necropolis and its storks'],
         mood: 'Stately elegance, Atlantic sunsets, royal gardens.',
-        unesco: true, heritage: ['Rabat, Modern Capital and Historic City — inscribed 2012'],
+        unesco: true, heritage: ['Rabat, Modern Capital and Historic City (inscribed 2012)'],
         music: { name: 'Andalusian Āla & Chaâbi', desc: "Salé's Andalusian orchestras alongside the joyful chaâbi of wedding nights." },
-        cuisine: ['Seffa medfouna — sweet vermicelli', 'Couscous tfaya with caramelised onions', 'Grilled Atlantic sardines', 'Almond briouats of Salé'],
+        cuisine: ['Seffa medfouna: sweet vermicelli', 'Couscous tfaya with caramelised onions', 'Grilled Atlantic sardines', 'Almond briouats of Salé'],
         crafts: ['Rabati hand-knotted carpets', 'Oulja pottery of Salé', 'Silk sfifa braid trimmings'],
         fact: "Hassan Tower was meant to be the minaret of the world's largest mosque in 1195. It still stands unfinished, at about 44 metres.",
         sky: ['#0e1631', '#80405e', '#f6a65e'], atmo: ['#1034A6', '#b04a5a', '#f0b25a'],
@@ -766,11 +777,11 @@
       {
         id: 'beni', name: 'Béni Mellal-Khénifra', ar: 'بني ملال خنيفرة', epithet: 'The Heart of the Atlas & Waterfalls',
         capital: 'Béni Mellal', tags: ['mountain'], climate: 'Alpine & Temperate', climateIcon: 'mountain-snow',
-        season: 'Apr – Jun · Sep – Oct', days: 3, lon: -6.35, lat: 32.34,
+        season: 'Apr-Jun · Sep-Oct', days: 3, lon: -6.35, lat: 32.34,
         lede: 'Emerald water tumbles from red cliffs, cedars breathe cool mountain air, and Barbary macaques watch from the branches.',
         highlights: ["Cascades d'Ouzoud, about 110 m of falls", 'The fjord-like Lake Bin El Ouidane', 'Middle Atlas cedar forests', "Aït Bouguemez, the 'Happy Valley'", 'Ain Asserdoun spring & Kasbah Ras el Ain'],
         mood: 'Cascading emerald waters, cool mountain air, Amazigh folklore.',
-        unesco: true, heritage: ["M'Goun UNESCO Global Geopark — designated 2014"],
+        unesco: true, heritage: ["M'Goun UNESCO Global Geopark (designated 2014)"],
         music: { name: 'Ahidous', desc: 'Circle dances of the Middle Atlas: shoulder to shoulder, call and response, frame drums beneath the stars.' },
         cuisine: ['Mountain lamb tagine with prunes', 'Béni Mellal oranges & olives', 'Amazigh tagella bread', 'Wild thyme honey'],
         crafts: ['Zaiane wool carpets of Khénifra', 'Azilal rugs with free-form symbols', 'Cedarwood carving'],
@@ -784,7 +795,7 @@
         lede: "Morocco's beating heart of commerce and Art Deco boulevards, crowned by a mosque that rises over the waves.",
         highlights: ['Hassan II Mosque: a 210 m minaret over the ocean', 'Quartier des Habous', 'Art Deco boulevards of the centre-ville', 'The Corniche of Aïn Diab', "El Jadida's Portuguese cistern"],
         mood: 'Oceanic spray, cosmopolitan pulse, grand architectural feats.',
-        unesco: true, heritage: ['Portuguese City of Mazagan (El Jadida) — inscribed 2004'],
+        unesco: true, heritage: ['Portuguese City of Mazagan (El Jadida) (inscribed 2004)'],
         music: { name: 'Aïta & Chaâbi', desc: "The raw, defiant 'cry' of the Chaouia and Doukkala plains, and the dance-floor chaâbi of the city." },
         cuisine: ['Rfissa with fenugreek & lentils', 'Grilled seafood at the old port', 'Harira with chebakia', 'Msemen for a street breakfast'],
         crafts: ['Habous copperware & brass trays', 'Art Deco ironwork restoration', 'Carved gebs plaster'],
@@ -794,13 +805,13 @@
       {
         id: 'marrakech', name: 'Marrakech-Safi', ar: 'مراكش آسفي', epithet: 'The Red City & Pottery Coast',
         capital: 'Marrakech', tags: ['imperial', 'coast', 'mountain'], climate: 'Hot Semi-Arid', climateIcon: 'sun-medium',
-        season: 'Mar – May · Oct – Nov', days: 4, lon: -7.99, lat: 31.63,
+        season: 'Mar-May · Oct-Nov', days: 4, lon: -7.99, lat: 31.63,
         lede: 'Terracotta ramparts glowing at dusk, storytellers and Gnawa drums in Jemaa el-Fnaa, and the wind-swept blue doors of Essaouira.',
         highlights: ['Jemaa el-Fnaa square at dusk', "Jardin Majorelle's cobalt villa", 'Bahia Palace', "Safi's Hill of Potters", 'Essaouira ramparts & argan groves'],
         mood: 'Terracotta dust, saffron & spices, Gnawa music, bohemian ocean winds.',
-        unesco: true, heritage: ['Medina of Marrakesh — inscribed 1985', 'Medina of Essaouira (formerly Mogador) — inscribed 2001', 'Jemaa el-Fnaa cultural space — Intangible Heritage', 'Gnawa — Intangible Heritage, 2019'],
+        unesco: true, heritage: ['Medina of Marrakesh (inscribed 1985)', 'Medina of Essaouira (formerly Mogador) (inscribed 2001)', 'Jemaa el-Fnaa cultural space (Intangible Heritage)', 'Gnawa (Intangible Heritage, 2019)'],
         music: { name: 'Gnawa', desc: "Trance music of the guembri bass lute and iron qraqeb castanets, celebrated every summer at Essaouira's festival." },
-        cuisine: ['Tanjia marrakchia — beef slow-cooked in an urn', 'Méchoui lamb', 'Sardines of Safi', 'Amlou with argan oil'],
+        cuisine: ['Tanjia marrakchia: beef slow-cooked in an urn', 'Méchoui lamb', 'Sardines of Safi', 'Amlou with argan oil'],
         crafts: ['Safi glazed ceramics', 'Essaouira thuya-wood marquetry', 'Leather babouches & pierced lanterns'],
         fact: "The garden's intense cobalt, now known as 'Majorelle Blue', was devised by the painter Jacques Majorelle, who began the garden in 1923.",
         sky: ['#2a0f0b', '#c65c40', '#f5b964'], atmo: ['#C2593F', '#e07a3a', '#E5C158'],
@@ -808,13 +819,13 @@
       {
         id: 'draa', name: 'Drâa-Tafilalet', ar: 'درعة تافيلالت', epithet: 'The Land of Kasbahs & Sahara Dunes',
         capital: 'Errachidia', tags: ['desert', 'mountain'], climate: 'Saharan Arid', climateIcon: 'sun',
-        season: 'Oct – Apr', days: 4, lon: -4.42, lat: 31.93,
+        season: 'Oct-Apr', days: 4, lon: -4.42, lat: 31.93,
         lede: 'Dunes rising some 150 metres into apricot light, mudbrick kasbahs older than memory, and skies so dark the Milky Way feels close enough to touch.',
         highlights: ['Erg Chebbi dunes at Merzouga', 'The ksar of Aït Benhaddou', 'Todra & Dadès Gorges', "Ouarzazate's Atlas Film Studios", "Valley of Roses, Kelaat M'Gouna"],
         mood: 'Golden desert silence, starry Saharan skies, mudbrick fortresses.',
-        unesco: true, heritage: ['Ksar of Aït-Ben-Haddou — inscribed 1987'],
+        unesco: true, heritage: ['Ksar of Aït-Ben-Haddou (inscribed 1987)'],
         music: { name: 'Ahwach & the Gnawa of Khamlia', desc: 'Village ahwach poetry-dances, and the Gnawa families of Khamlia drumming at the foot of the dunes.' },
-        cuisine: ['Medfouna — stuffed bread baked in embers', 'Medjool dates of Tafilalet', "Rose-water pastries of Kelaat M'Gouna", 'Tagine with preserved khlii meat'],
+        cuisine: ['Medfouna: stuffed bread baked in embers', 'Medjool dates of Tafilalet', "Rose-water pastries of Kelaat M'Gouna", 'Tagine with preserved khlii meat'],
         crafts: ['Tamegroute green-glazed pottery', 'Pisé mudbrick architecture', 'Damask rose distillation'],
         fact: 'Aït Benhaddou has been a film set for Lawrence of Arabia, Gladiator and Game of Thrones.',
         sky: ['#070816', '#2d1c42', '#d98f3e'], atmo: ['#d48b1c', '#D4AF37', '#8a3b1e'],
@@ -826,9 +837,9 @@
         lede: 'Goats in argan trees, legendary right-hand point breaks, and silversmiths shaping Amazigh fibulae in Tiznit.',
         highlights: ['Agadir bay & the Agadir Oufella kasbah', "Taghazout, Morocco's surf capital", "Taroudant's ramparts, the 'Little Marrakech'", 'The silver souk of Tiznit', 'Bald ibis of Souss-Massa National Park'],
         mood: 'Golden argan orchards, Atlantic surf breaks, Amazigh silver craftsmanship.',
-        unesco: true, heritage: ['Arganeraie Biosphere Reserve — designated 1998', 'Argan knowledge & practices — Intangible Heritage, 2014'],
+        unesco: true, heritage: ['Arganeraie Biosphere Reserve (designated 1998)', 'Argan knowledge & practices (Intangible Heritage, 2014)'],
         music: { name: 'Rways & Ahwach', desc: 'Travelling Amazigh troubadours with ribab fiddle and lotar lute, singing poetry of love and land.' },
-        cuisine: ['Amlou — argan, almond & honey', 'Couscous with seven vegetables', 'Fresh Agadir seafood', 'Tagine finished with argan oil'],
+        cuisine: ['Amlou: argan, almond & honey', 'Couscous with seven vegetables', 'Fresh Agadir seafood', 'Tagine finished with argan oil'],
         crafts: ['Tiznit filigree silver & fibulae', "Women's argan oil cooperatives", 'Taroudant stone carving'],
         fact: 'The argan tree is native almost exclusively to southwest Morocco. Women\'s cooperatives still crack the kernels by hand.',
         sky: ['#1a1430', '#cc6a3e', '#f8d57c'], atmo: ['#c8673d', '#E5C158', '#2b8a9a'],
@@ -836,13 +847,13 @@
       {
         id: 'guelmim', name: 'Guelmim-Oued Noun', ar: 'كلميم واد نون', epithet: 'The Desert Gateway & Camel Caravans',
         capital: 'Guelmim', tags: ['desert', 'coast'], climate: 'Ocean-Desert Mild', climateIcon: 'cloud-sun',
-        season: 'Oct – May', days: 2, lon: -10.06, lat: 28.99,
+        season: 'Oct-May', days: 2, lon: -10.06, lat: 28.99,
         lede: "The ancient 'Gateway to the Sahara', where caravans traded salt and gold, and the ocean carved red stone into cathedral arches.",
         highlights: ["Guelmim's camel souk", "Legzira's red sea arches", 'Plage Blanche, some 40 km of white sand', 'Amtoudi oasis & its clifftop granary', "Sidi Ifni's Spanish Art Deco town"],
         mood: 'Ocean meets desert, nomadic caravans, sculpted sea arches.',
-        unesco: false, heritage: ["Agadir Id Aïssa — Amtoudi's fortified collective granary", 'Asrir oasis & the moussem of Guelmim'],
+        unesco: false, heritage: ["Agadir Id Aïssa, Amtoudi's fortified collective granary", 'Asrir oasis & the moussem of Guelmim'],
         music: { name: 'Hassani music & Guedra', desc: 'The hypnotic Guedra dance, performed kneeling to a single drum, born among the nomads of this land.' },
-        cuisine: ['Camel tagine', 'Zrig — whipped camel milk', 'Three-glass Saharan tea', 'Barley couscous'],
+        cuisine: ['Camel tagine', 'Zrig: whipped camel milk', 'Three-glass Saharan tea', 'Barley couscous'],
         crafts: ['Sahrawi leather saddlery', 'Woven camel-hair khaïma tents', 'Silver & amber jewellery'],
         fact: "Of Legzira's two famous arches, one collapsed in 2016. The one still standing frames spectacular Atlantic sunsets.",
         sky: ['#1b0e14', '#a8432f', '#f2a472'], atmo: ['#a3412e', '#C2593F', '#2f78a8'],
@@ -850,25 +861,25 @@
       {
         id: 'laayoune', name: 'Laâyoune-Sakia El Hamra', ar: 'العيون الساقية الحمراء', epithet: 'The Coastal Dunes & Wind',
         capital: 'Laâyoune', tags: ['desert', 'coast'], climate: 'Trade-Wind Desert', climateIcon: 'wind',
-        season: 'Oct – Apr', days: 2, lon: -13.2, lat: 27.15,
+        season: 'Oct-Apr', days: 2, lon: -13.2, lat: 27.15,
         lede: 'Sweeping dunes slide into Atlantic surf, lighthouses guard the old trade routes, and every welcome begins with three glasses of tea.',
         highlights: ["Laâyoune's oasis & the Foum El Oued lagoon", "Tarfaya & the Saint-Exupéry museum", 'Boujdour lighthouse', 'Coastal dune ridges of Sakia El Hamra', "Casa Mar, Tarfaya's fort in the sea"],
         mood: 'Sweeping sands, ocean tides, Bedouin hospitality.',
-        unesco: false, heritage: ['Aéropostale heritage of Cap Juby, Tarfaya', 'Khnifiss Lagoon National Park — Ramsar wetland'],
+        unesco: false, heritage: ['Aéropostale heritage of Cap Juby, Tarfaya', 'Khnifiss Lagoon National Park (Ramsar wetland)'],
         music: { name: 'Hassani music', desc: 'Melodic poetry sung to the tidinit lute and the ardin harp, the soul of nomadic hospitality.' },
         cuisine: ['Camel méchoui', 'The Hassani tea ritual', 'Saharan couscous with dates', 'Fresh fish from the Atlantic banks'],
         crafts: ['Hand-dyed melhfa veils', 'Khaïma tent weaving', 'Engraved wooden chests'],
-        fact: 'Antoine de Saint-Exupéry ran the Cap Juby airmail stop at Tarfaya in 1927–28, in the desert that would later inspire The Little Prince.',
+        fact: 'Antoine de Saint-Exupéry ran the Cap Juby airmail stop at Tarfaya in 1927-28, in the desert that would later inspire The Little Prince.',
         sky: ['#14101e', '#bd7a3e', '#f4d28e'], atmo: ['#b9773c', '#D4AF37', '#2f6fa0'],
       },
       {
         id: 'dakhla', name: 'Dakhla-Oued Ed-Dahab', ar: 'الداخلة وادي الذهب', epithet: 'The Turquoise Lagoon Paradise',
         capital: 'Dakhla', tags: ['coast', 'desert'], climate: 'Windy & Sunny', climateIcon: 'wind',
-        season: 'All year · kite season Apr – Sep', days: 3, lon: -15.94, lat: 23.71,
+        season: 'All year · kite season Apr-Sep', days: 3, lon: -15.94, lat: 23.71,
         lede: 'A 40-kilometre turquoise lagoon where the Sahara plunges straight into the sea, and the trade winds never sleep.',
         highlights: ['Dakhla Lagoon kitesurf spots', 'Dragon Island at low tide', 'Dune Blanche, the White Dune', 'Hot springs of Asmaa', 'Oyster farms of the bay'],
         mood: 'Endless turquoise waters, untouched white sand, serenity and thrill.',
-        unesco: false, heritage: ['Dakhla Bay — Ramsar wetland', 'Flamingo & migratory bird sanctuaries'],
+        unesco: false, heritage: ['Dakhla Bay (Ramsar wetland)', 'Flamingo & migratory bird sanctuaries'],
         music: { name: 'Hassani music', desc: 'Haunting Hassani melodies on the tidinit lute, sung under tents as the lagoon turns silver.' },
         cuisine: ['Dakhla oysters', 'Grilled octopus & sea bream', 'Zrig camel milk', 'Saharan mint tea'],
         crafts: ['Melhfa textiles in vivid dyes', 'Shell & silver ornaments', 'Leather poufs & saddle bags'],
@@ -905,7 +916,7 @@
     function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 2600); }
 
     /* =========================================================
-       SVG ART — procedural landscapes for each region
+       SVG ART - procedural landscapes for each region
     ========================================================= */
     let uidCounter = 0;
     const f1 = n => n.toFixed(1);
@@ -1140,8 +1151,10 @@
     function setupNav() {
       $('#logo-star').innerHTML = logoStar;
       const nav = $('#nav');
-      const onScroll = () => nav.classList.toggle('scrolled', scrollY > 30);
-      addEventListener('scroll', onScroll, { passive: true }); onScroll();
+      const sentinel = document.createElement('div'); sentinel.setAttribute('aria-hidden', 'true');
+      sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:30px;pointer-events:none';
+      document.body.prepend(sentinel);
+      new IntersectionObserver(([e]) => nav.classList.toggle('scrolled', !e.isIntersecting)).observe(sentinel);
 
       const secs = ['regions', 'crafts', 'quiz', 'journey'].map(id => document.getElementById(id));
       const io = new IntersectionObserver(es => es.forEach(e => {
@@ -1166,7 +1179,7 @@
     }
 
     /* =========================================================
-       HERO — letters, counters, time & weather
+       HERO - letters, counters, time & weather
     ========================================================= */
     function setupHero() {
       [['#hero-photo', HERO_FILE], ['#interlude-photo', INTERLUDE_FILE]].forEach(([sel, file]) => { const im = $(sel); im.onload = () => im.classList.add('loaded'); im.onerror = () => im.remove(); im.src = COMMONS(file); });
@@ -1223,7 +1236,7 @@
     }
 
     /* =========================================================
-       REGIONS — grid, carousel, map
+       REGIONS - grid, carousel, map
     ========================================================= */
     let filter = 'all', view = 'grid';
     const matches = r => filter === 'all' || r.tags.includes(filter);
@@ -1234,14 +1247,11 @@
       return `<article class="region-card iri card-enter flex flex-col" style="--d:${i * 55}ms; --card-rgb:${hexRgb(r.atmo[1]).join(',')}" data-id="${r.id}">
         <div class="sheen"></div>
         <div class="scene">${photoScene(r)}</div>
-        <div class="pointer-events-none absolute left-4 right-4 top-4 flex items-center justify-between">
-          <span class="num rounded-full bg-black/40 px-2.5 py-1 backdrop-blur">${r.num}</span>
-          <span class="tag">${icon(r.climateIcon)}${r.climate}</span>
-        </div>
         <div class="relative flex flex-1 flex-col p-5">
           <p class="text-[10px] uppercase tracking-[0.25em] text-gold-soft/80">${r.epithet}</p>
           <h3 class="mt-2 font-cinzel text-lg leading-snug text-sand">${r.name}</h3>
           <p class="mt-1 font-arabic text-xl text-sand/55" lang="ar" dir="rtl">${r.ar}</p>
+          <p class="mt-3 flex items-center gap-1.5 text-xs text-sand/60 [&>svg]:h-3.5 [&>svg]:w-3.5">${icon(r.climateIcon)}${r.climate}</p>
           <div class="mt-auto flex items-center gap-2 pt-4">
             <button class="btn-gold btn-sm flex-1 justify-center" data-open="${r.id}">${icon('scroll-text')}Explore Heritage</button>
             <button class="icon-btn border !border-gold/25" data-journey="${r.id}" aria-pressed="${inJ}" data-on="${inJ}" aria-label="${inJ ? 'Remove' : 'Add'} ${r.name} ${inJ ? 'from' : 'to'} journey">${icon(inJ ? 'check' : 'plus')}</button>
@@ -1311,7 +1321,7 @@
       ring.innerHTML = Car.items.map((r, i) => `<div class="car-card iri" data-i="${i}" data-id="${r.id}" style="--card-rgb:${hexRgb(r.atmo[1]).join(',')}; transform: rotateY(${i * Car.theta}deg) translateZ(${Car.radius}px)" role="group" aria-roledescription="slide" aria-label="${r.n} of 12: ${r.name}">
           <div class="scene">${photoScene(r)}</div>
           <div class="p-4">
-            <div class="flex items-center justify-between"><span class="num">${r.num}</span><span class="text-[10px] uppercase tracking-widest text-sand/50">${r.capital}</span></div>
+            <p class="text-[10px] uppercase tracking-widest text-sand/50">${r.capital}</p>
             <h3 class="mt-2 font-cinzel text-[15px] leading-snug text-sand">${r.name}</h3>
             <p class="mt-1 font-arabic text-lg text-sand/55" lang="ar" dir="rtl">${r.ar}</p>
           </div>
@@ -1426,7 +1436,7 @@
       $$('.sel-btn').forEach(n => n.classList.toggle('active', n.dataset.id === id));
       $('#map-info').innerHTML = `<div class="fade-swap">
         <div class="flex items-start justify-between gap-3">
-          <div><p class="text-[10px] uppercase tracking-[0.25em] text-gold-soft/80">${r.num} · ${r.epithet}</p>
+          <div><p class="text-[10px] uppercase tracking-[0.25em] text-gold-soft/80">${r.epithet}</p>
           <h3 class="mt-2 font-cinzel text-xl text-sand">${r.name}</h3>
           <p class="font-arabic text-xl text-sand/55" lang="ar" dir="rtl">${r.ar}</p></div>
           <span class="tag flex-none">${icon(r.climateIcon)}${r.climate}</span>
@@ -1440,7 +1450,7 @@
     }
 
     /* =========================================================
-       DRAWER — immersive region detail
+       DRAWER - immersive region detail
     ========================================================= */
     let lastFocus = null, drawerId = null;
     function openDrawer(id, from) {
@@ -1452,8 +1462,7 @@
         <div class="d-scene relative aspect-[16/10] overflow-hidden">${photoScene(r, true)}
           <div class="absolute inset-0 bg-gradient-to-t from-[#091f28] via-transparent to-black/30"></div>
           <button id="drawer-close" class="icon-btn absolute right-4 top-4 bg-black/40 backdrop-blur" aria-label="Close region details">${icon('x')}</button>
-          <span class="num absolute left-5 top-5 rounded-full bg-black/40 px-3 py-1 backdrop-blur">${r.num} / 12</span>
-          <a class="photo-credit !bottom-auto !top-[4.6rem] !right-5" href="${COMMONS_PAGE(PHOTO_FILES[r.id])}" target="_blank" rel="noopener">PHOTO · WIKIMEDIA COMMONS</a>
+          <a class="photo-credit !bottom-auto !top-6 !right-[4.5rem]" href="${COMMONS_PAGE(PHOTO_FILES[r.id])}" target="_blank" rel="noopener">PHOTO · WIKIMEDIA COMMONS</a>
         </div>
         <div class="stagger -mt-16 space-y-7 px-5 pb-10 sm:px-8">
           <header class="relative">
@@ -1461,7 +1470,7 @@
             <h2 id="drawer-title" class="mt-3 font-cinzel text-3xl leading-tight text-sand sm:text-4xl">${r.name}</h2>
             <p class="mt-1 font-arabic text-3xl text-gold-soft/80" lang="ar" dir="rtl">${r.ar}</p>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag">${icon('map-pin')}Capital · ${r.capital}</span>
+              <span class="tag">${icon('map-pin')}Capital: ${r.capital}</span>
               <span class="tag">${icon(r.climateIcon)}${r.climate}</span>
               <span class="tag">${icon('calendar')}${r.season}</span>
               <span class="tag">${icon('clock')}${r.days} days</span>
@@ -1558,8 +1567,8 @@
         const ids = ROUTE.filter(id => journey.has(id));
         if (!ids.length) { toast('Add a region first'); return; }
         let day = 1;
-        const text = 'My Moroccan Journey\n' + ids.map(id => { const r = byId[id], s = `Days ${day}–${day + r.days - 1}: ${r.name} (${r.capital})`; day += r.days; return s; }).join('\n');
-        try { await navigator.clipboard.writeText(text); toast('Itinerary copied. Bon voyage!'); }
+        const text = 'My Moroccan Journey\n' + ids.map(id => { const r = byId[id], s = `Days ${day}-${day + r.days - 1}: ${r.name} (${r.capital})`; day += r.days; return s; }).join('\n');
+        try { await navigator.clipboard.writeText(text); toast('Itinerary copied. Bon voyage.'); }
         catch (e) { toast('Copy unavailable in this browser'); }
       });
     }
@@ -1595,7 +1604,7 @@
       const c = CRAFTS.find(x => x.id === id), stage = $('#craft-stage');
       stage.setAttribute('aria-labelledby', 'ct-' + id);
       stage.classList.remove('lantern-on');
-      const head = `<div class="mb-6 flex flex-col gap-1"><p class="eyebrow !text-[10px]">Craft ${CRAFTS.indexOf(c) + 1} of 4</p><h3 class="font-cinzel text-2xl text-sand sm:text-3xl">${c.name}</h3><p class="max-w-2xl text-sm leading-relaxed text-sand/65">${c.blurb}</p></div>`;
+      const head = `<div class="mb-6 flex flex-col gap-1"><h3 class="font-cinzel text-2xl text-sand sm:text-3xl">${c.name}</h3><p class="max-w-2xl text-sm leading-relaxed text-sand/65">${c.blurb}</p></div>`;
       stage.innerHTML = `<div class="fade-swap">${head}<div id="craft-body"></div></div>`;
       ({ zellij: craftZellij, lantern: craftLantern, weave: craftWeave, tea: craftTea })[id]($('#craft-body'));
       refreshIcons();
@@ -1820,7 +1829,7 @@
       </div>`;
       const render = () => {
         const s = TEA[step];
-        $('#tea-text').innerHTML = `<div class="fade-swap"><p class="font-cinzel text-xs tracking-[0.3em] text-gold-soft">STEP ${step + 1} / ${TEA.length}</p><h4 class="mt-2 font-serif text-2xl italic text-sand">${s.t}</h4><p class="mt-3 text-sm leading-relaxed text-sand/70">${s.d}</p></div>`;
+        $('#tea-text').innerHTML = `<div class="fade-swap"><h4 class=" font-serif text-2xl italic text-sand">${s.t}</h4><p class="mt-3 text-sm leading-relaxed text-sand/70">${s.d}</p></div>`;
         $$('.tea-step-dot').forEach((d, i) => d.classList.toggle('on', i <= step));
         $('#mint').style.opacity = step >= 1 ? 1 : 0;
         $('#sugar').style.opacity = step === 2 ? 1 : 0;
@@ -1935,8 +1944,8 @@
         const inp = $('#nl-email'), msg = $('#nl-msg'), v = inp.value.trim();
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) { msg.textContent = 'That address looks incomplete. Please try again.'; msg.className = 'mt-2 min-h-[1.25rem] text-xs text-terracotta'; inp.focus(); return; }
         store.set('mor-newsletter', v);
-        msg.textContent = `Shukran! Seasonal guides will be addressed to ${v}.`; msg.className = 'mt-2 min-h-[1.25rem] text-xs text-gold-soft';
-        inp.value = ''; toast('Shukran! Marhaban bikum.');
+        msg.textContent = `Shukran. Seasonal guides will be sent to ${v}.`; msg.className = 'mt-2 min-h-[1.25rem] text-xs text-gold-soft';
+        inp.value = ''; toast('Shukran. Marhaban bikum.');
       });
     }
 
