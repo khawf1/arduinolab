@@ -319,8 +319,77 @@
     .photo-credit:hover { color: #fff; }
 
 
+    /* =========================================================
+       MOTION — tuned with the web-animation-design guidelines
+       ease-out for enter/exit, ease-in-out for on-screen movement,
+       ease for hover colour; UI interactions under 300ms.
+    ========================================================= */
+    :root {
+      --ease-out: cubic-bezier(.23, 1, .32, 1);          /* ease-out-quint */
+      --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+      --ease-in-out: cubic-bezier(.645, .045, .355, 1);  /* ease-in-out-cubic */
+    }
+    /* Hover & colour: plain ease, short and specific (no transition: all) */
+    .btn-gold { transition: transform 160ms var(--ease-out), box-shadow 200ms ease, filter 200ms ease; }
+    .btn-ghost { transition: transform 160ms var(--ease-out), border-color 150ms ease, color 150ms ease, background-color 150ms ease; }
+    .icon-btn { transition: transform 160ms var(--ease-out), color 150ms ease, border-color 150ms ease, background-color 150ms ease; }
+    .seg button { transition: transform 160ms var(--ease-out), color 150ms ease, background-color 200ms ease, box-shadow 200ms ease; }
+    .chip, .craft-tab, .sel-btn { transition: transform 160ms var(--ease-out), color 150ms ease, border-color 150ms ease, background-color 150ms ease; }
+    .quiz-opt { transition: transform 160ms var(--ease-out), border-color 150ms ease, background-color 150ms ease; }
+    .nav-link { transition: color 150ms ease; }
+    .nav-link::after { transition: transform 250ms var(--ease-out); }
+    #nav { transition: background-color 300ms ease, border-color 300ms ease; }
+    .iri::before { transition: opacity 200ms ease; }
+    .tea-step-dot { transition: width 250ms var(--ease-out), background-color 250ms ease; }
+    .map-tip { transition: opacity 150ms var(--ease-out); }
+    .map-node .core { transition: fill 150ms ease; }
+    .zellij-tile { transition: fill 200ms ease, transform 160ms var(--ease-out); }
+
+    /* Press feedback: elements answer the tap instantly */
+    .btn-gold:active, .btn-ghost:active, .icon-btn:active, .chip:active, .seg button:active, .quiz-opt:active, .craft-tab:active, .sel-btn:active { transform: scale(.97); }
+
+    /* Hover-only effects run where there is a real hover; no layout-shifting lifts (avoids hover flicker) */
+    .btn-gold:hover, .quiz-opt:hover, .zellij-tile:hover, .region-card:hover { transform: none; }
+    .region-card:hover .photo-scene > img { transform: none; }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-gold:hover { filter: brightness(1.06); }
+      .region-card:hover { border-color: rgb(var(--accent) / .35); box-shadow: 0 34px 70px -34px rgb(0 0 0 / .9); }
+      .region-card:hover .photo-scene > img { transform: scale(1.04); }
+      .zellij-tile:hover { transform: scale(.95); }
+    }
+    .photo-scene > img { transition: opacity 600ms var(--ease-out), transform 700ms var(--ease-out); }
+
+    /* Enter / exit: ease-out, from a visible shape (never scale(0)) */
+    @keyframes cardIn { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+    .card-enter { animation: cardIn 450ms var(--ease-out-quart) both; animation-delay: var(--d, 0ms); }
+    .fade-swap, .stagger > * { animation: cardIn 300ms var(--ease-out) both; }
+    .stagger > *:nth-child(2) { animation-delay: 40ms; } .stagger > *:nth-child(3) { animation-delay: 80ms; } .stagger > *:nth-child(4) { animation-delay: 120ms; }
+    .stagger > *:nth-child(5) { animation-delay: 160ms; } .stagger > *:nth-child(6) { animation-delay: 200ms; } .stagger > *:nth-child(7) { animation-delay: 240ms; }
+    @keyframes weave { from { transform: scaleX(.6); opacity: 0; } }
+    .rug-row { animation: weave 400ms var(--ease-out) both; }
+    html.js .reveal { transition: opacity 700ms var(--ease-out-quart), transform 700ms var(--ease-out-quart); transition-delay: var(--d, 0ms); }
+    .progress-bar span { transition: width 400ms var(--ease-out); }
+    #toast { transform: translate(-50%, 12px); transition: transform 250ms var(--ease-out), opacity 250ms var(--ease-out); }
+    #toast.show { transform: translate(-50%, 0); }
+
+    /* Drawer + backdrop move as one unit: same easing & duration; exit ~20% faster */
+    #drawer { transition: transform 240ms var(--ease-out); }
+    #drawer-backdrop { transition: opacity 240ms var(--ease-out); }
+    #drawer.open { transition-duration: 300ms; }
+    #drawer-backdrop.open { transition-duration: 300ms; }
+
+    /* On-screen movement: ease-in-out */
+    .car-ring { transition: transform 600ms var(--ease-in-out); }
+    .car-card { transition: opacity 600ms var(--ease-in-out), filter 600ms var(--ease-in-out), box-shadow 200ms ease; }
+    .tea-el { transition: opacity 500ms var(--ease-in-out), transform 700ms var(--ease-in-out); }
+
+    /* Touch: at least 44px hit area on small icon buttons */
+    .icon-btn { position: relative; width: 44px; height: 44px; }
+    .icon-btn::before { content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .hero-media img, .photo-scene > img, .interlude > img { opacity: 1; transform: none; }
       html.js .reveal { opacity: 1; transform: none; filter: none; }
       .hl { opacity: 1; transform: none; filter: none; }
       .map-coast { stroke-dashoffset: 0; }
@@ -1219,8 +1288,11 @@
       $('#car-prev').addEventListener('click', () => { Car.idx--; updateCarousel(); });
       $('#car-next').addEventListener('click', () => { Car.idx++; updateCarousel(); });
       stage.addEventListener('keydown', e => {
-        if (e.key === 'ArrowLeft') { Car.idx--; updateCarousel(); }
-        if (e.key === 'ArrowRight') { Car.idx++; updateCarousel(); }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+          // Keyboard steps are repeated quickly, so they move instantly instead of animating.
+          ring.classList.add('dragging'); Car.idx += e.key === 'ArrowLeft' ? -1 : 1; updateCarousel();
+          requestAnimationFrame(() => requestAnimationFrame(() => ring.classList.remove('dragging')));
+        }
         if (e.key === 'Enter') openDrawer(Car.items[carActive()].id, stage);
       });
       stage.addEventListener('pointerdown', e => { Car.drag = { x: e.clientX, dx: 0, moved: false }; ring.classList.add('dragging'); stage.setPointerCapture(e.pointerId); });
